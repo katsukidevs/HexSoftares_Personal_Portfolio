@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background-color: #222;
+            padding: 20px;
+            margin: 10px 50px;
+            border-radius: 0 0 15px 15px;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: space-around;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        .content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-grow: 1;
+            max-width: 800px;
+            text-align: left;
+            margin: auto;
+            height: 100vh;
+        }
+        .content img {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 20px;
+        }
+        
+        
+        .education {
+            text-align: center;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .education h1 {
+            font-size: 36px;
+            text-transform: uppercase;
+            border-bottom: 2px solid white;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .education-container {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+        .education-box {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            width: 300px;
+        }
+        .education-box img {
+            width: 80px;
+            height: auto;
+        }
+        
+        .bio {
+            max-width: 500px;
+        }
+        footer {
+            background-color: #111;
+            padding: 20px;
+            text-align: center;
+            margin-top: auto;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+        .contact-info a {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .contact-info img {
+            width: 30px;
+            height: 30px;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a onclick="showSection('about')">About</a>
+            <a onclick="showSection('education')">Education</a>
+            <a onclick="showSection('experience')">Experience</a>
+            <a onclick="showSection('contact')">Contact</a>
+        </nav>
+    </header>
+    
+    <div id="about" class="content">
+        <img src="portrait.png" alt="My Photo">
+        <div class="bio">
+            <h1>Sukhrobjon Jalolov</h1>
+            <p>Highly organized and detail-oriented student with leadership and teamworking skills. I
+ have experience working as a part of a team. Eager to learn new skills and participate in
+ big events.</p>
+        </div>
+    </div>
+    <div id="education" class="content education" style="display: none;">
+        <h1>Education</h1>
+        <div class="education-container">
+            <div class="education-box">
+                <img src="logoNewuu.svg" alt="NewUU Logo" style="border-radius: 0%;">
+                <p><strong>New Uzbekistan University</strong></p>
+                <p>2021 - Present</p>
+                <p>Software Engineering (Incomplete Bachelor's Degree)</p>
+            </div>
+            <div class="education-box">
+                <img src="NamPSlogo.jpg" alt="Presidential School Logo">
+                <p><strong>Namangan Presidential School</strong></p>
+                <p>2019 - 2021</p>
+                <p>High School Diploma (Advanced Mathematics, Physics, CS)</p>
+            </div>
+        </div>
+    </div>
+    <div id="experience" class="content" style="display: none; flex-direction: column; align-items: center;">
+        <h1>Experience</h1>
+        <div class="education-box">
+            <p><strong>Intern Web Designer/Developer</strong></p>
+            <p>New Uzbekistan University</p>
+            <p>January 20, 2025 - February 28, 2025</p>
+            <p>Worked on creating new looks for the university website.</p>
+        </div>
+    </div>
+    <div id="contact" class="content" style="display: none; flex-direction: column; align-items: center;">
+        <h1>Contact</h1>
+        <div class="contact-info">
+            <a href="https://linkedin.com/in/yourprofile" target="_blank">
+                <img src="linkedin-logo.png" alt="LinkedIn"> LinkedIn
+            </a>
+            <a href="mailto:suxrobjalolovhpfan@gmail.com">
+                <img src="email-logo.png" alt="Email"> suxrobjalolovhpfan@gmail.com
+            </a>
+            <a href="tel:+998332200902">
+                <img src="phone-logo.png" alt="Phone"> +998332200902
+            </a>
+            <a href="https://t.me/suxrob_jalolov" target="_blank">
+                <img src="telegram-logo.png" alt="Telegram"> Telegram
+            </a>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2025 Katsukidevs. All rights reserved.</p>
+    </footer>
+    
+    <script>
+        function showSection(sectionId) {
+            let sections = document.querySelectorAll('.content');
+            sections.forEach(section => section.style.display = 'none');
+            document.getElementById(sectionId).style.display = 'flex';
+        }
+    </script>
+</body>
+</html>
